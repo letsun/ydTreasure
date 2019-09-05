@@ -1,0 +1,276 @@
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  font: normal normal normal 28px/40px 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz--tap-highlight-color: rgba(0, 0, 0, 0);
+  -o--tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea,
+button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+body {
+  margin: 0 auto;
+  position: relative;
+}
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.pullLeft {
+  float: left;
+}
+.pullRight {
+  float: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#container .content .swiper-container .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+#container .content .treasure-infor {
+  width: 100%;
+  margin: 0 auto;
+}
+#container .content .treasure-infor .product-title {
+  padding: 14px 20px;
+  font-size: 30px;
+  color: #000;
+  font-weight: 500;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#container .content .treasure-infor .nickname {
+  padding: 0 20px;
+  margin-top: 12px;
+  font-size: 26px;
+  color: #666;
+}
+#container .content .treasure-infor .dec {
+  position: relative;
+  padding: 0 20px;
+  line-height: 36px;
+}
+#container .content .treasure-infor .dec:before,
+#container .content .treasure-infor .dec:after {
+  content: " ";
+  display: table;
+}
+#container .content .treasure-infor .dec:after {
+  clear: both;
+}
+#container .content .treasure-infor .dec .issue {
+  color: #ea3a3a;
+  font-size: 26px;
+}
+#container .content .treasure-infor .dec .issue span {
+  font-size: 26px;
+}
+#container .content .treasure-infor .dec .createtime {
+  font-size: 26px;
+  color: #999;
+}
+#container .content .treasure-infor .dec .createtime span {
+  font-size: 26px;
+}
+#container .content .treasure-infor .progress-wra {
+  position: relative;
+  padding: 0 20px;
+  margin-top: 16px;
+}
+#container .content .treasure-infor .progress-wra:before,
+#container .content .treasure-infor .progress-wra:after {
+  content: " ";
+  display: table;
+}
+#container .content .treasure-infor .progress-wra:after {
+  clear: both;
+}
+#container .content .treasure-infor .progress-wra .progress-bar {
+  position: relative;
+  float: left;
+  width: 520px;
+  height: 50px;
+  background: #e6e6e8;
+  border-radius: 35px;
+}
+#container .content .treasure-infor .progress-wra .progress-percentage {
+  float: left;
+  margin-left: 10px;
+  color: #000;
+  font-size: 28px;
+  line-height: 50px;
+}
+#container .content .treasure-infor .progress-wra .progress-num {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  z-index: 1;
+  font-size: 22px;
+  color: #000;
+  line-height: 50px;
+}
+#container .content .treasure-infor .progress-wra .progress-num .participate-num {
+  float: left;
+}
+#container .content .treasure-infor .progress-wra .progress-num .total-num {
+  float: left;
+  margin-left: 22px;
+}
+#container .content .treasure-infor .progress-wra .progress-num .remaining-num {
+  float: left;
+  margin-left: 22px;
+}
+#container .content .treasure-infor .participate-btn {
+  width: 280px;
+  height: 60px;
+  margin: 50px auto 0 auto;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  background: #0374d2;
+  border-radius: 18px;
+  box-shadow: 1px 2px 30px 10px #c7e0f6;
+}
+#container .content .participate-record {
+  margin: 50px auto 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+}
+#container .content .participate-record .record-title {
+  width: 560px;
+  height: 46px;
+  margin-left: 10px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 46px;
+  text-align: center;
+  background: #a8a8a8;
+}
+#container .content .participate-record .record-list {
+  padding-top: 20px;
+}
+#container .content .participate-record .record-list .record-item {
+  padding: 0 20px;
+  font-size: 24px;
+  color: #666;
+  line-height: 50px;
+}
+#container .content .participate-record .record-list .record-item:before,
+#container .content .participate-record .record-list .record-item:after {
+  content: " ";
+  display: table;
+}
+#container .content .participate-record .record-list .record-item:after {
+  clear: both;
+}
+#container .content .participate-record .record-list .record-item .record-time {
+  float: left;
+}
+#container .content .participate-record .record-list .record-item .record-line {
+  position: relative;
+  float: left;
+  margin: 19.5px 10px 0 10px;
+}
+#container .content .participate-record .record-list .record-item .record-line .border {
+  width: 11px;
+  height: 11px;
+  background: #666;
+  border-radius: 50%;
+}
+#container .content .participate-record .record-list .record-item .record-line .border-line {
+  position: absolute;
+  left: 5px;
+  top: 11px;
+  height: 40px;
+  border-left: 1px solid #ddd;
+}
+#container .content .participate-record .record-list .record-item .record-right {
+  float: left;
+}
+#container .content .participate-record .record-list .record-item .record-right .nickname {
+  color: #da2d2f;
+}
+#container .content .participate-record .record-list .record-item .record-right .par-num {
+  color: #da2d2f;
+}

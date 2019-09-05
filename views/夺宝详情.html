@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=640, user-scalable=no">
+    <link rel="stylesheet" href="../scripts/plugins/swiper/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="../css/treasureDetail.css">
+</head>
+<body>
+<div id="container">
+    <div class="content">
+
+        <!--轮播图-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="">
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!--参与信息-->
+        <div class="treasure-infor">
+            <div class="product-title">儿童电话手表</div>
+            <div class="nickname">微信名称：<span>张三</span></div>
+            <div class="dec">
+                <div class="issue">当前期号：<span>20190830010</span></div>
+                <div class="createtime">创建时间：<span>20190830 18:30:00</span></div>
+            </div>
+
+            <div class="progress-wra">
+                <div class="progress-bar">
+                    <!--<img src="" alt="">-->
+                </div>
+                <div class="progress-percentage">69%</div>
+                <div class="progress-num">
+                    <div class="participate-num">本期参与人次：&nbsp;&nbsp;<span>137</span></div>
+                    <div class="total-num">总需<span>140</span>人次</div>
+                    <div class="remaining-num">还剩<span>3</span>人次</div>
+                </div>
+            </div>
+
+            <div class="participate-btn">我要参与</div>
+        </div>
+
+        <!--参与记录-->
+        <div class="participate-record">
+            <div class="record-title">
+                本期所有参与记录 自<span>2019-08-30  10:00:00</span>开始
+            </div>
+            <div class="record-list">
+                <div class="record-item">
+                    <div class="record-time">2019-08-30 10:00:00</div>
+                    <div class="record-line">
+                        <div class="border"></div>
+                        <div class="border-line"></div>
+                    </div>
+                    <div class="record-right">
+                        <span class="nickname">微信名称</span>参与了<span class="par-num">5</span>次
+                    </div>
+                </div>
+                <div class="record-item">
+                    <div class="record-time">2019-08-30 10:00:00</div>
+                    <div class="record-line">
+                        <div class="border"></div>
+                        <div class="border-line"></div>
+                    </div>
+                    <div class="record-right">
+                        <span class="nickname">微信名称</span>参与了<span class="par-num">5</span>次
+                    </div>
+                </div>
+                <div class="record-item">
+                    <div class="record-time">2019-08-30 10:00:00</div>
+                    <div class="record-line">
+                        <div class="border"></div>
+                        <div class="border-line"></div>
+                    </div>
+                    <div class="record-right">
+                        <span class="nickname">微信名称</span>参与了<span class="par-num">5</span>次
+                    </div>
+                </div>
+                <div class="record-item">
+                    <div class="record-time">2019-08-30 10:00:00</div>
+                    <div class="record-line">
+                        <div class="border"></div>
+                        <div class="border-line"></div>
+                    </div>
+                    <div class="record-right">
+                        <span class="nickname">微信名称</span>参与了<span class="par-num">5</span>次
+                    </div>
+                </div>
+                <div class="record-item">
+                    <div class="record-time">2019-08-30 10:00:00</div>
+                    <div class="record-line">
+                        <div class="border"></div>
+                        <div class="border-line"></div>
+                    </div>
+                    <div class="record-right">
+                        <span class="nickname">微信名称</span>参与了<span class="par-num">5</span>次
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/lib/jquery-2.2.2.min.js"></script>
+<script src="../scripts/lib/common.js"></script>
+<script src="../scripts/plugins/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script>
+    /**
+     * @desc 轮播图配置
+     */
+    var swiper = new Swiper(".swiper-container",{
+        loop: true,
+        pagination: '.swiper-pagination',
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
+    });
+
+    common.alert({
+        mask: true,
+        dialog: true,
+        okValue: '是',
+        cancelValue: '否',
+        content: '是否消耗一次夺宝机会？',
+    })
+</script>
+</body>
+</html>

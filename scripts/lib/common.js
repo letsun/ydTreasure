@@ -60,7 +60,7 @@ window.common = {};
                 'font-size: 26px;padding: 0;color: #ec3a3a;outline: none;" id="dConfirm' + id + '">' + okValue + '</button></div></div>';
         } else {
             con += '<div><button style="width: 100%;height: 60px;border: none;background: none;font-size: 26px;' +
-                'padding: 0;color: #60a0ff;outline: none;" id="dConfirm' + id + '">' + okValue + '</button></div></div></div>';
+                'padding: 0;color: #ec3a3a;outline: none;" id="dConfirm' + id + '">' + okValue + '</button></div></div></div>';
         }
 
         //向页面添加弹框

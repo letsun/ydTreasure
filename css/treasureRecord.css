@@ -264,3 +264,131 @@ body {
 #container .tab-list .active .tab-text {
   color: #0374d2;
 }
+#container .award-infor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+#container .award-infor .awardBox {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  width: 84%;
+  padding-bottom: 54px;
+  background: #fff;
+  border-radius: 20px;
+  -webkit-transform: translateY(-50%);
+}
+#container .award-infor .awardBox .title {
+  position: relative;
+}
+#container .award-infor .awardBox .title .title-bg {
+  display: block;
+  width: 100%;
+}
+#container .award-infor .awardBox .title .title-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  -webkit-transform: translateY(-50%);
+}
+#container .award-infor .awardBox .inputBox {
+  position: relative;
+  width: 80%;
+  height: 60px;
+  margin: 20px auto 0 auto;
+}
+#container .award-infor .awardBox .inputBox:before,
+#container .award-infor .awardBox .inputBox:after {
+  content: " ";
+  display: table;
+}
+#container .award-infor .awardBox .inputBox:after {
+  clear: both;
+}
+#container .award-infor .awardBox .inputBox input[type="text"] {
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 60px;
+  color: #333;
+  font-size: 26px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#container .award-infor .awardBox .inputBox input[type="text"]::-webkit-input-placeholder {
+  color: #cccccc;
+}
+#container .award-infor .awardBox .inputBox .selectBox {
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 60px;
+  margin-left: 5%;
+}
+#container .award-infor .awardBox .inputBox .selectBox:first-child {
+  margin-left: 0;
+}
+#container .award-infor .awardBox .inputBox .selectBox select {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 30px;
+  color: #cccccc;
+  font-size: 26px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: transparent;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-appearance: none;
+}
+#container .award-infor .awardBox .inputBox .selectBox select option {
+  font-size: 13px;
+  background: #fff;
+}
+#container .award-infor .awardBox .inputBox .selectBox .icon {
+  position: absolute;
+  right: 2px;
+  top: 10px;
+  z-index: 5;
+  color: #000;
+  font-size: 34px;
+}
+#container .award-infor .awardBox .last-inputBox {
+  margin-top: 30px;
+}
+#container .award-infor .awardBox .submit-btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.5em;
+  border-radius: 6px;
+  background: #1c81d9;
+  box-shadow: 1px 2px 20px #c7e0f6, 1px -2px 20px #c7e0f6;
+}

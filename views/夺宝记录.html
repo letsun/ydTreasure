@@ -6,6 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=640, user-scalable=no">
+    <link rel="stylesheet" href="../css/iconfont.css">
     <link rel="stylesheet" href="../css/treasureRecord.css">
 </head>
 <body>
@@ -144,12 +145,68 @@
             <div class="tab-text">个人中心</div>
         </a>
     </div>
+
+    <!-- 领奖信息填写框 -->
+    <div class="award-infor" id="award-infor">
+        <div class="awardBox">
+            <div class="title">
+                <img src="../images/9_1.png" alt="" class="title-bg">
+                <div class="title-text">领奖信息</div>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="name" maxlength="30" placeholder="请填写领奖人姓名">
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="mobile" maxlength="11" placeholder="请填写您的手机号">
+            </div>
+
+            <div class="inputBox">
+                <div class="selectBox">
+                    <select class="select-text" id="province">
+                        <option>省</option>
+                    </select>
+                    <i class="icon iconfont icon-sanjiaoxing"></i>
+                </div>
+
+                <div class="selectBox cityBox">
+                    <select class="select-text" id="city">
+                        <option>市</option>
+                    </select>
+                    <i class="icon iconfont icon-sanjiaoxing"></i>
+                </div>
+                <div class="selectBox areaBox">
+                    <select class="select-text" id="area">
+                        <option>区</option>
+                    </select>
+                    <i class="icon iconfont icon-sanjiaoxing"></i>
+                </div>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="address" maxlength="50" placeholder="请填写详细地址">
+            </div>
+
+            <div class="inputBox last-inputBox">
+                <div class="submit-btn" id="submit-btn">提交</div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="../scripts/lib/jquery-2.2.2.min.js"></script>
 <script src="../scripts/lib/common.js"></script>
+<script src="../scripts/plugins/cityData/cityData.js"></script>
+<script src="../scripts/plugins/cityData/citySelect.js"></script>
+<script src="../scripts/other/treasureRecord.js"></script>
 <script>
-
+    var select = new citySelect({
+        province: $("#province"),
+        city: $("#city"),
+        area: $("#area"),
+        cityCon: $(".cityBox"),
+        areaCon: $(".areaBox"),
+    });
 </script>
 </body>
 </html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=640, user-scalable=no">
+    <link rel="stylesheet" href="../scripts/plugins/swiper/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="../css/purchase.css">
+    <script src="../scripts/lib/jquery-2.2.2.min.js"> </script>
+    <script src="../scripts/plugins/betterScroll/bscroll.js"></script>
+</head>
+
+<body>
+    <div id="container" class="container">
+
+        <div class="content" id="scrollWra">
+            <div class="warp">
+                <div class="list">
+                    <div class="content-item">
+
+                        <div class="content-item-left">
+                        </div>
+
+                        <div class="content-item-middel">
+                            <p>我是店铺名称(张*三)</p>
+                            <p>手机号码：<span>183****8810</span> </p>
+                        </div>
+
+                        <div class="content-item-right">
+                            <p>1000</p>
+                            <p>动销数量(次)</p>
+                        </div>
+                    </div>
+                    <div class="content-item">
+
+                        <div class="content-item-left">
+                        </div>
+
+                        <div class="content-item-middel">
+                            <p>我是店铺名称(张三)</p>
+                            <p>手机号码：<span>18370688810</span> </p>
+                        </div>
+
+                        <div class="content-item-right">
+                            <p>1000</p>
+                            <p>动销数量(次)</p>
+                        </div>
+                    </div>
+                    <div class="content-item">
+
+                        <div class="content-item-left">
+                        </div>
+
+                        <div class="content-item-middel">
+                            <p>我是店铺名称(张三)</p>
+                            <p>手机号码：<span>18370688810</span> </p>
+                        </div>
+
+                        <div class="content-item-right">
+                            <p>1000</p>
+                            <p>动销数量(次)</p>
+                        </div>
+                    </div>
+                    <div class="content-item">
+
+                        <div class="content-item-left">
+                            4
+                        </div>
+
+                        <div class="content-item-middel">
+                            <p>我是店铺名称(张三)</p>
+                            <p>手机号码：<span>18370688810</span> </p>
+                        </div>
+
+                        <div class="content-item-right">
+                            <p>1000</p>
+                            <p>动销数量(次)</p>
+                        </div>
+                    </div>
+                    <div class="content-item">
+
+                        <div class="content-item-left">
+                            4
+                        </div>
+
+                        <div class="content-item-middel">
+                            <p>我是店铺名称(张三)</p>
+                            <p>手机号码：<span>18370688810</span> </p>
+                        </div>
+
+                        <div class="content-item-right">
+                            <p>1000</p>
+                            <p>动销数量(次)</p>
+                        </div>
+                    </div>
+                    <div class="content-item">
+
+                        <div class="content-item-left">
+                            4
+                        </div>
+
+                        <div class="content-item-middel">
+                            <p>我是店铺名称(张三)</p>
+                            <p>手机号码：<span>18370688810</span> </p>
+                        </div>
+
+                        <div class="content-item-right">
+                            <p>1000</p>
+                            <p>动销数量(次)</p>
+                        </div>
+                    </div>
+                    <div class="content-item">
+
+                        <div class="content-item-left">
+                            4
+                        </div>
+
+                        <div class="content-item-middel">
+                            <p>我是店铺名称(张三)</p>
+                            <p>手机号码：<span>18370688810</span> </p>
+                        </div>
+
+                        <div class="content-item-right">
+                            <p>1000</p>
+                            <p>动销数量(次)</p>
+                        </div>
+                    </div>
+                    <div class="content-item">
+
+                        <div class="content-item-left">
+                            4
+                        </div>
+
+                        <div class="content-item-middel">
+                            <p>我是店铺名称(张三)</p>
+                            <p>手机号码：<span>18370688810</span> </p>
+                        </div>
+
+                        <div class="content-item-right">
+                            <p>1000</p>
+                            <p>动销数量(次)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="loadText">上滑加载更多</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        // 禁止页面滚动
+        $('#container').on('touchmove', function (e) {
+            e.preventDefault();
+        });
+        var scrollWra = new BScroll('#scrollWra', {
+            scrollbar: {
+                fade: true
+            },
+            click: true,
+            pullUpLoad: {
+                threshold: 0
+            }
+        });
+
+        var hasNext = true;     // 是否有下一页;
+        var page = 1;          // 第一页;
+        var html = '';
+
+        scrollWra.on('pullingUp', function () {
+            if (!hasNext) {
+                $('.loadText').text('没有更多数据了');
+                return false;
+            }
+
+            page++;
+
+            $('.loadText').text('正在加载中...');
+
+            if (page == 5) {
+                hasNext = false;
+            }
+
+            // 请求后台接口获取数据
+
+            for (var i = 0; i < 6; i++) {
+                // debugger
+                html += '<div class="content-item">';
+                html += '<div class="content-item-left">4</div>';
+                html += '<div class="content-item-middel">';
+                html += '<p>我是店铺名称(张三)</p>';
+                html += '<p>手机号码：<span>18370688810</span> </p>';
+                html += '</div>';
+                html += '<div class="content-item-right">';
+                html += '<p>1000</p>';
+                html += '<p>动销数量(次)</p>';
+                html += '</div>';
+                html += '</div>';
+
+            }
+            $('.loadText').text('上滑加载更多');
+            $('.list').append(html);
+            scrollWra.finishPullUp();
+            scrollWra.refresh();
+        });
+    </script>
+
+</body>
+
+</html>

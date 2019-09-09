@@ -1,0 +1,71 @@
+@import "reset";
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+#container {
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+
+	.header {
+		padding: 60px 0;
+
+		text-align: center;
+		font-size: 32px;
+		font-weight: bold;
+		color: #000;
+
+		border-bottom: 2px solid #cccccc;
+
+		.header-text {
+			margin-top: 6px;
+
+			span {
+				color: #ea3a3a;
+			}
+
+		}
+	}
+
+	.content {
+
+		.tip {
+			margin: 20px 0 0 50px;
+			width: 170px;
+			height: 46px;
+
+			color: #fff;
+			text-align: center;
+			line-height: 46px;
+
+			border-radius: 12px;
+
+			background: #e93b3c;
+		}
+
+		.qrcode {
+			display: block;
+
+			margin: 13px auto 0 auto;
+		}
+
+		.code-text {
+			display: block;
+
+			margin: 30px auto 0 auto;
+		}
+	}
+
+	.bottom {
+		position: absolute;
+		left: 50%;
+		bottom: 30px;
+		z-index: 1;
+
+		-webkit-transform: translateX(-50%);
+	}
+}

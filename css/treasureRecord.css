@@ -152,7 +152,7 @@ body {
   bottom: 105px;
   z-index: 1;
   width: 100%;
-  overflow-y: scroll;
+  overflow: hidden;
   box-sizing: border-box;
 }
 #container .content .record-list .record-item {
@@ -269,7 +269,7 @@ body {
   top: 0;
   left: 0;
   z-index: 999;
-  display: block;
+  display: none;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);

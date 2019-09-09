@@ -75,6 +75,9 @@
 
 
 
+
+            
+
             <!-- 点击开启红包 -->
             <div class="content-btn">
                 <img src="../images/1_8.png">
@@ -110,6 +113,9 @@
         <div class="footer">
             <img src="../images/1_6.png">
         </div>
+        <div class="layer"></div>
+
+
 
 
 
@@ -137,13 +143,20 @@
         })
 
         //点击开红包
-        $('.content-btn').on('click', function () {
+        $('.content-hba-item').on('click', function () {
 
+            
             $('.content-hba-item').addClass('active')
         })
 
         //动画结束
         $('.content-hba-item').on('transitionend', function () {
+            
+            // 点击开红包按钮显示
+            $('.content-btn').show()
+            $('.layer').show()
+            
+
             $('.content-hba').hide()
             $('.content-hbb').show()
 
@@ -153,10 +166,10 @@
             //     $('.contenta').show()
             // }, 2000);
 
-            setInterval(function () {
-                $('.content').hide()
-                $('.contenta').show()
-            }, 2000)
+            // setInterval(function () {
+            //     $('.content').hide()
+            //     $('.contenta').show()
+            // }, 2000)
         })
 
     </script>

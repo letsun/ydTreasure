@@ -102,17 +102,17 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(../images/1_7.png) no-repeat;
+  background: url(../images/1_7.jpg) no-repeat;
   background-size: 100% 100%;
 }
 .container .logo {
   position: absolute;
-  top: 1%;
-  left: 1%;
+  top: 2%;
+  left: 2%;
 }
 .container .test {
   position: absolute;
-  top: 8%;
+  top: 14%;
   left: 0;
   right: 20px;
   text-align: center;
@@ -120,11 +120,11 @@ body {
 .container .hdgz {
   position: absolute;
   right: 0px;
-  top: 6%;
+  top: 1%;
 }
 .container .content {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 40px;
   right: 40px;
   display: block;
@@ -134,19 +134,21 @@ body {
 }
 .container .content .content-hba .content-hba-item {
   height: 176px;
-  width: 168px;
+  width: 198px;
   float: left;
   margin-right: 28px;
-  margin-bottom: 30px;
-  transition: 3s;
-  transform: rotateY(1800deg);
+  margin-bottom: 50px;
+  margin-left: 50px;
+  transition: 1s;
+  transform: rotateY(360deg);
   overflow: hidden;
+  transform-origin: 45% 65%;
 }
 .container .content .content-hba .active {
-  transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
-.container .content .content-hba .content-hba-item:nth-child(3n) {
+.container .content .content-hba .content-hba-item:nth-child(2n) {
   margin-right: 0px;
 }
 .container .content .content-hbb {
@@ -156,31 +158,30 @@ body {
 .container .content .content-hbb .content-hbb-item {
   margin-right: 28px;
   margin-bottom: 30px;
-  background: url(../images/1_4.png) no-repeat;
+  background: url(../images/1_8.png) no-repeat;
   background-size: 100% 100%;
-  height: 176px;
-  width: 168px;
+  height: 192px;
+  width: 176px;
   text-align: center;
   float: left;
+  display: none;
   position: absolute;
 }
 .container .content .content-hbb .content-hbb-item .jb {
-  color: #fbc501;
-  font-size: 44px;
-  padding-right: 15px;
-  padding-top: 70px;
+  color: #f33132;
+  font-size: 50px;
+  padding-top: 45px;
   font-weight: bold;
 }
 .container .content .content-hbb .content-hbb-item .text {
   font-size: 18px;
-  color: #fbc501;
-  padding-top: 15px;
-  padding-right: 15px;
+  color: #ef9f60;
+  padding-top: 45px;
+  letter-spacing: 5px;
 }
 .container .content .content-hbb .content-hbb-item .ydlb1 {
   color: #fbc501;
   font-size: 44px;
-  padding-right: 15px;
   padding-top: 70px;
   font-weight: bold;
 }
@@ -188,7 +189,6 @@ body {
   font-size: 36px;
   color: #fbc501;
   font-weight: bold;
-  padding-right: 15px;
   padding-top: 5px;
 }
 .container .content .content-hbb .content-hbb-item .wzj1 {
@@ -205,26 +205,18 @@ body {
   font-weight: bold;
 }
 .container .content .content-hbb .content-hbb-item:nth-child(1) {
-  left: 0;
-  z-index: 9;
+  left: 52px;
 }
 .container .content .content-hbb .content-hbb-item:nth-child(2) {
-  left: 200px;
+  left: 328px;
 }
 .container .content .content-hbb .content-hbb-item:nth-child(3) {
-  left: 393px;
+  top: 227px;
+  left: 52px;
 }
 .container .content .content-hbb .content-hbb-item:nth-child(4) {
-  left: 0;
-  top: 204px;
-}
-.container .content .content-hbb .content-hbb-item:nth-child(5) {
-  left: 200px;
-  top: 204px;
-}
-.container .content .content-hbb .content-hbb-item:nth-child(6) {
-  left: 393px;
-  top: 204px;
+  top: 227px;
+  left: 328px;
 }
 .container .content .content-btn {
   text-align: center;
@@ -246,51 +238,44 @@ body {
   background: rgba(0, 0, 0, 0.6);
 }
 .container .contenta {
-  position: absolute;
-  top: 40%;
-  left: 40px;
-  right: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
   display: none;
+  z-index: 100;
 }
-.container .contenta .contenta-hb {
-  background: url(../images/3_3.png) no-repeat;
-  height: 281px;
-  width: 553px;
-}
-.container .contenta .contenta-hb .contenta-hb-title {
-  text-align: center;
-  color: #e52f25;
-  font-weight: bold;
-  font-size: 30px;
-  padding-top: 5px;
-}
-.container .contenta .contenta-hb .contenta-hb-middel {
-  position: relative;
-  height: 50px;
-  line-height: 50px;
-  font-size: 24px;
-}
-.container .contenta .contenta-hb .contenta-hb-middel .span1 {
+.container .contenta .contenta-con {
   position: absolute;
-  left: 170px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 607px;
+  width: 544px;
+  background: url(../images/1_11.png) no-repeat;
 }
-.container .contenta .contenta-hb .contenta-hb-middel .span2 {
-  position: absolute;
-  right: 170px;
+.container .contenta .contenta-con .contenta-hb {
   color: #e52f25;
-}
-.container .contenta .contenta-hb .contenta-hb-jb {
   text-align: center;
-  color: #e52f25;
-  font-size: 30px;
+  padding-top: 240px;
+  font-size: 22px;
   font-weight: bold;
 }
-.container .contenta .contenta-btn1 {
-  text-align: center;
-  padding-top: 50px;
+.container .contenta .contenta-con .contenta-hb span {
+  font-size: 60px;
 }
-.container .contenta .contenta-btn2 {
+.container .contenta .contenta-con .contenta-btn1 {
+  text-align: center;
+  padding-top: 80px;
+}
+.container .contenta .contenta-con .contenta-btn2 {
   padding-top: 20px;
+  text-align: center;
+}
+.container .contenta .contenta-con .contenta-con-gb {
+  margin-top: 90px;
   text-align: center;
 }
 .container .footer {
@@ -308,6 +293,7 @@ body {
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   display: none;
+  z-index: 99;
 }
 .container .hdgztc .hdgztc-con {
   position: absolute;
@@ -315,7 +301,17 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 544px;
+  height: 607px;
+  background: url(../images/1_11.png) no-repeat;
+}
+.container .hdgztc .hdgztc-con .hdgztc-con-header {
+  width: 446px;
+  height: 400px;
+  margin: auto;
+  margin-top: 160px;
+  overflow: hidden;
 }
 .container .hdgztc .hdgztc-con .hdgztc-con-gb {
-  padding-top: 20px;
+  margin-top: 90px;
 }

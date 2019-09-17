@@ -36,24 +36,23 @@
                 <div class="content-hba-item">
                     <img src="../images/1_4.png" alt="">
                 </div>
-                <div class="content-hba-item">
+                <!-- <div class="content-hba-item">
                     <img src="../images/1_4.png" alt="">
                 </div>
                 <div class="content-hba-item">
                     <img src="../images/1_4.png" alt="">
-                </div>
+                </div> -->
             </div>
 
             <!-- 开启红包后展示 -->
             <div class="content-hbb">
                 <div class="content-hbb-item">
                     <p class="jb"> 0.58</p>
-
-                    <p class="text">红包</p>
+                    <p class="text">现金红包</p>
                 </div>
                 <div class="content-hbb-item">
                     <p class="jb"> 1.68</p>
-                    <p class="text">红包</p>
+                    <p class="text">现金红包</p>
                 </div>
                 <div class="content-hbb-item">
                     <p class="jb"> 6.66</p>
@@ -63,56 +62,46 @@
                     <p class="jb"> 99</p>
                     <p class="text">红包</p>
                 </div>
-                <div class="content-hbb-item">
-                    <p class="ydlb1">椰岛</p>
-                    <p class="ydlb2">大礼包</p>
-                </div>
-                <div class="content-hbb-item">
-                    <p class="wzj1">谢谢</p>
-                    <p class="wzj2">惠顾</p>
-                </div>
+
             </div>
 
-
-
-
-            
-
-            <!-- 点击开启红包 -->
+            <!-- 点击开启红包
             <div class="content-btn">
                 <img src="../images/1_8.png">
-            </div>
+            </div> -->
         </div>
 
 
         <!-- 领取红包 -->
         <div class="contenta">
-            <div class="contenta-hb">
-                <div class="contenta-hb-title">
-                    恭喜
+
+            <div class="contenta-con">
+                <div class="contenta-hb">
+                    <span>0.58</span>元
                 </div>
 
-                <div class="contenta-hb-middel">
-                    <span class="span1">张三</span> <span class="span2">获得</span>
+                <div class="contenta-btn1">
+                    <img src="../images/3_1.png">
+                </div>
+                <div class="contenta-btn2">
+                    <img src="../images/3_2.png">
                 </div>
 
-                <div class="contenta-hb-jb">
-                    0.58元
+                <div class="contenta-con-gb">
+                    <img src="../images/1_10.png">
                 </div>
             </div>
 
-            <div class="contenta-btn1">
-                <img src="../images/3_1.png">
-            </div>
-            <div class="contenta-btn2">
-                <img src="../images/3_2.png">
-            </div>
+
+
         </div>
 
 
         <div class="footer">
             <img src="../images/1_6.png">
         </div>
+
+        <!-- 遮罩层 -->
         <div class="layer"></div>
 
 
@@ -124,55 +113,93 @@
         <div class="hdgztc">
 
             <div class="hdgztc-con">
-                <img src="../images/1_9.png">
-                <img class="hdgztc-con-gb" src="../images/1_10.png">
+                <div class="hdgztc-con-header">
+
+                    <img src="../images/1_12.png">
+                </div>
+
+                <div class="hdgztc-con-bottom">
+                    <img class="hdgztc-con-gb" src="../images/1_10.png">
+                </div>
+
             </div>
         </div>
     </div>
 
     <script src="../scripts/lib/jquery-2.2.2.min.js"></script>
-
+    <script src="../scripts/plugins/betterScroll/bscroll.js"></script>
     <script>
-
-        $('.hdgz').on('click',function(){
+        // 打开活动规则
+        $('.hdgz').on('click', function () {
             $(".hdgztc").fadeIn()
+            scrollWra.refresh();
         })
 
-        $('.hdgztc-con-gb').on('click',function(){
+        var scrollWra = new BScroll('.hdgztc-con-header', {
+            click: true,
+        })
+
+
+        $('.hdgztc-con-gb').on('click', function () {
             $(".hdgztc").fadeOut()
         })
 
+
+        var index;
         //点击开红包
         $('.content-hba-item').on('click', function () {
 
-            
-            $('.content-hba-item').addClass('active')
+            var that = this;
+            index = $('.content-hba-item').index(that)
+            console.log(index)
+            $(that).addClass('active')
         })
 
         //动画结束
         $('.content-hba-item').on('transitionend', function () {
-            
-            // 点击开红包按钮显示
-            $('.content-btn').show()
-            $('.layer').show()
-            
 
-            $('.content-hba').hide()
+            // 遮罩成
+            $('.layer').show()
+
+            // $('.content-hba-item').eq(index).removeClass("active")
             $('.content-hbb').show()
 
 
-            // setInterval(() => {
-            //     $('.content').hide()
-            //     $('.contenta').show()
-            // }, 2000);
+            // 显示点击的红包 
 
-            // setInterval(function () {
-            //     $('.content').hide()
-            //     $('.contenta').show()
-            // }, 2000)
+            $('.content-hbb-item').eq(index).fadeIn()
+            $('.content-hbb-item').eq(index).css("z-index", "9")
+
+            interval = setTimeout(timer, 1500);
+
+        })
+
+
+        //使用延时器
+
+        // 延时器
+        function timer() {
+            // 显示全部红包的奖项
+            $('.content-hba').hide();
+            $('.content-hbb-item').show();
+            intervala = setTimeout(timera, 1500);
+        }
+
+
+        // 显示中奖领取弹窗
+        function timera() {
+            $('.contenta').show();
+
+        }
+        // 关闭中奖弹窗
+        $('.contenta-con-gb').on('click', function () {
+            $('.contenta').hide()
+
         })
 
     </script>
+
+
 </body>
 
 </html>

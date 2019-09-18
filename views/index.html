@@ -23,7 +23,7 @@
         <div class="content">
 
             <!-- 未点击开启红包展示 -->
-            <div class="content-hba">
+            <div class="content-hba content-hba6">
                 <div class="content-hba-item">
                     <img src="../images/1_4.png" alt="">
                 </div>
@@ -36,16 +36,16 @@
                 <div class="content-hba-item">
                     <img src="../images/1_4.png" alt="">
                 </div>
-                <!-- <div class="content-hba-item">
+                <div class="content-hba-item">
                     <img src="../images/1_4.png" alt="">
                 </div>
                 <div class="content-hba-item">
                     <img src="../images/1_4.png" alt="">
-                </div> -->
+                </div>
             </div>
 
             <!-- 开启红包后展示 -->
-            <div class="content-hbb">
+            <div class="content-hbb content-hbb6">
                 <div class="content-hbb-item">
                     <p class="jb"> 0.58</p>
                     <p class="text">现金红包</p>
@@ -62,7 +62,14 @@
                     <p class="jb"> 99</p>
                     <p class="text">红包</p>
                 </div>
-
+                <div class="content-hbb-item">
+                    <p class="jb"> 99</p>
+                    <p class="text">红包</p>
+                </div>
+                <div class="content-hbb-item">
+                    <p class="jb"> 99</p>
+                    <p class="text">红包</p>
+                </div>
             </div>
 
             <!-- 点击开启红包
@@ -134,11 +141,10 @@
             $(".hdgztc").fadeIn()
             scrollWra.refresh();
         })
-
+        
         var scrollWra = new BScroll('.hdgztc-con-header', {
             click: true,
         })
-
 
         $('.hdgztc-con-gb').on('click', function () {
             $(".hdgztc").fadeOut()
